@@ -1,3 +1,4 @@
 #!/usr/bin/zsh
 
-ansible-lint
+echo "Static code analysis"
+ansible-lint $@

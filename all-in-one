@@ -1,7 +1,5 @@
 #!/usr/bin/zsh
 
-echo "Static code analysis"
 jobs/tests/static/ansible-lint
-
-echo "Website deployment"
-ansible-playbook $@ deploy.yml
+jobs/deploy
+jobs/test

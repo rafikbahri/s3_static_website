@@ -1,0 +1,4 @@
+#!/usr/bin/zsh
+
+echo "Tests" 
+ansible-playbook $@ tests/web.yml
