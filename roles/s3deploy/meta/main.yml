@@ -5,12 +5,12 @@ galaxy_info:
 
   license: TBD
 
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
 
   platforms:
     - name: Ubuntu
       versions:
-        - 22.04
+        - jammy
 
   galaxy_tags:
     - aws
