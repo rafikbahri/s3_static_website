@@ -25,3 +25,9 @@ Configuration
 | bucket_local_website_path | Local path to static website resources |
 | bucket_name               | Desired (or existent) S3 bucket name   |
 | tags                      | Tags if any                            |
+
+
+TODO
+----
+
+- [ ] requirements.yml
