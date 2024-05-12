@@ -3,7 +3,6 @@ S3 static website deployment
 
 Given an AWS access keys and a local path to a static website resources, this project deploys the website to S3.
 
-
 Architecture
 ------------
 
@@ -26,8 +25,7 @@ Configuration
 | bucket_name               | Desired (or existent) S3 bucket name   |
 | tags                      | Tags if any                            |
 
-
 TODO
 ----
 
-- [ ] requirements.yml
+- Solve ansible-playbook warnings

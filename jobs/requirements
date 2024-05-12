@@ -1,0 +1,4 @@
+#!/usr/bin/zsh
+
+echo "Install Ansible requirements"
+ansible-galaxy collection install -r requirements.yml -f
