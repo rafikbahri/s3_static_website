@@ -23,7 +23,3 @@
     state: present
     suffix: index.html
   register: _website
-
-- name: Debug
-  debug:
-    msg: "website: {{ _website }}"
