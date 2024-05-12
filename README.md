@@ -3,7 +3,6 @@ S3 static website deployment
 
 Given an AWS access keys and a local path to a static website resources, this project deploys the website to S3.
 
-
 Architecture
 ------------
 
