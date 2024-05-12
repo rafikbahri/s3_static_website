@@ -61,6 +61,7 @@ enable_list:
   # add yaml here if you want to avoid ignoring yaml checks when yamllint
   # library is missing. Normally its absence just skips using that rule.
   - yaml
+  - fqcn[action-core]
 # Report only a subset of tags and fully ignore any others
 # tags:
 #   - jinja[spacing]
