@@ -22,7 +22,7 @@ exclude_paths:
 mock_modules:
   - amazon.aws
 mock_roles:
-  - mocked_role
+  - amazon.aws.s3_bucket_info
   - author.role_name # old standalone galaxy role
   - fake_namespace.fake_collection.fake_role # role within a collection
 
