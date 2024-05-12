@@ -30,4 +30,4 @@ Configuration
 TODO
 ----
 
-- [ ] requirements.yml
+-  Solve ansible-playbook warnings
