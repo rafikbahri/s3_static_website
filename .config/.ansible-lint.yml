@@ -104,18 +104,4 @@ kinds:
   # - vars: "**/vars/*.yml"
   # - meta: "**/meta/main.yml"
   - yaml: "**/*.yaml-too"
-
-# List of additional collections to allow in only-builtins rule.
-# only_builtins_allow_collections:
-#   - example_ns.example_collection
-
-# List of additions modules to allow in only-builtins rule.
-# only_builtins_allow_modules:
-#   - example_module
-
-# Allow setting custom prefix for name[prefix] rule
 task_name_prefix: "{stem} | "
-# Complexity related settings
-
-# Limit the depth of the nested blocks:
-# max_block_depth: 20

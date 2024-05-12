@@ -1,5 +1,6 @@
 #!/usr/bin/zsh
 
+jobs/requirements
 jobs/tests/static/ansible-lint
 jobs/deploy
 jobs/test
