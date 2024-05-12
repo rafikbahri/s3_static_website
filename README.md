@@ -26,8 +26,7 @@ Configuration
 | bucket_name               | Desired (or existent) S3 bucket name   |
 | tags                      | Tags if any                            |
 
-
 TODO
 ----
 
--  Solve ansible-playbook warnings
+- Solve ansible-playbook warnings
