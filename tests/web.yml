@@ -26,3 +26,7 @@
         method: HEAD
         url: "http://rafikbahri.s3-website.{{ _result.buckets[0].bucket_location.LocationConstraint }}.amazonaws.com"
         status_code: 200
+
+    - name: Infos
+      ansible.builtin.debug:
+        msg: "Website URL: http://rafikbahri.s3-website.{{ _result.buckets[0].bucket_location.LocationConstraint }}.amazonaws.com"
