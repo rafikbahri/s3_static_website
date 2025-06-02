@@ -1,38 +1,67 @@
-Role Name
-=========
+# S3Deploy Ansible Role
 
-A brief description of the role goes here.
+An Ansible role for deploying and configuring static websites on AWS S3.
 
-Requirements
-------------
+## Description
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role automates the deployment of static websites to Amazon S3 by:
 
-Role Variables
---------------
+1. Creating/ensuring an S3 bucket exists with proper public access settings
+2. Configuring the bucket policy to allow public read access
+3. Synchronizing local website files to the S3 bucket
+4. Enabling S3 static website hosting
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+## Requirements
 
-Dependencies
-------------
+- Ansible 2.1 or higher
+- AWS credentials properly configured
+- AWS CLI
+- Python boto3 library
+- Access to an AWS account with permissions to create and modify S3 buckets
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+## Role Variables
 
-Example Playbook
-----------------
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `bucket_name` | Name of the S3 bucket to create/use | Required |
+| `bucket_tags` | Tags to apply to the S3 bucket | Required |
+| `bucket_local_website_path` | Local path to the static website files | Required |
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+## Example Playbook
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+---
+- name: Deploy static website to S3
+  hosts: localhost
+  roles:
+    - role: s3deploy
+      vars:
+        bucket_name: my-static-website
+        bucket_tags:
+          tier: web
+          web: static
+        bucket_local_website_path: /path/to/website/files
+```
 
-License
--------
+## Task Workflow
 
-BSD
+1. Checks if the S3 bucket exists and creates it if necessary
+2. Configures the bucket with public access settings
+3. Applies a bucket policy allowing public read access
+4. Synchronizes local files to the S3 bucket
+5. Enables S3 website hosting with index.html as the default document
 
-Author Information
-------------------
+## Dependencies
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role depends on the following collections:
+
+- amazon.aws
+- community.aws
+
+## License
+
+TBD
+
+## Author
+
+Rafik Bahri
