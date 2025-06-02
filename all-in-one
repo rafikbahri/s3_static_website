@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
 jobs/requirements
 jobs/tests/static/ansible-lint

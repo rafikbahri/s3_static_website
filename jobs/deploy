@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
 echo "Website deployment"
 ansible-playbook $@ deploy.yml
